@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phase1 Day3 桌面 Agent Core</title>
+  <style>
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f7f8;color:#17202a;line-height:1.58}
+    header{background:#243746;color:white;padding:36px 42px 26px} header h1{margin:0 0 8px;font-size:30px} header p{margin:0;color:#dbe4ea;max-width:1000px}
+    main{max-width:1120px;margin:24px auto 48px;padding:0 22px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .panel{background:white;border:1px solid #d8dee6;border-radius:8px;padding:20px;margin:16px 0}.tag{display:inline-block;border:1px solid #b8ded8;background:#eef8f6;color:#0b534d;border-radius:999px;padding:3px 10px;font-size:12px}
+    h2{margin:10px 0 10px;font-size:21px}.muted{color:#667789}.button{display:inline-block;text-decoration:none;background:#0f766e;color:white;border-radius:6px;padding:10px 13px;font-weight:650;margin-top:8px}
+    code{background:#f1f5f9;border:1px solid #d8dee6;border-radius:5px;padding:1px 5px}@media(max-width:920px){.grid{grid-template-columns:1fr}header{padding:28px 22px 20px}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Day3 桌面 Agent Core</h1>
+  <p>手搓一个最小本地 Agent：调用大模型 API，读取和操作 workspace，生成结构化学习资料，并保留 trace。设备接入留到 Day4。</p>
+</header>
+<main>
+  <div class="grid">
+    <div class="panel">
+      <span class="tag">主产物</span>
+      <h2>Agent 控制台</h2>
+      <p class="muted">展示 Tool Use、RAG 检索、LLM 生成、写文件和 trace 证据。</p>
+      <a class="button" href="outputs/Day3_Agent控制台.html">打开控制台</a>
+    </div>
+    <div class="panel">
+      <span class="tag" style="background:#fff7ed;border-color:#fed7aa;color:#9a3412">🆕 微信对话窗口</span>
+      <h2>小组排程 AI 桌面窗口</h2>
+      <p class="muted">独立的 Windows 桌面窗口（非网页）。微信风格 UI，直接对话，自动解析聊天记录生成排程。</p>
+      <a class="button" style="background:#07c160" href="run_wechat_app.bat">🚀 打开微信对话窗口</a>
+      <a class="button" style="background:#334155;margin-left:4px" href="outputs/Scheduling_Agent控制台.html">📊 查看排程面板</a>
+    </div>
+    <div class="panel">
+      <span class="tag">核心代码</span>
+      <h2>day3_agent_core.py</h2>
+      <p class="muted">Day4 设备网关调用的可复用 Agent Core。</p>
+      <a class="button" href="day3_agent_core.py">查看代码</a>
+    </div>
+    <div class="panel">
+      <span class="tag">Trace</span>
+      <h2>执行轨迹</h2>
+      <p class="muted">保留 Agent 每一步做了什么。</p>
+      <a class="button" href="outputs/trace_log.jsonl">查看 trace</a>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Workspace 产物</h2>
+    <p><a href="outputs/agent_workspace/summaries/course_summary.md">课程摘要</a> / <a href="outputs/agent_workspace/summaries/tasks.md">待办</a> / <a href="outputs/agent_workspace/summaries/risks.md">风险</a> / <a href="outputs/agent_workspace/cards/review_cards.json">复习卡</a></p>
+    <p><a href="outputs/agent_workspace/knowledge/chunk_index.json">知识库索引</a> / <a href="outputs/agent_workspace/knowledge/retrieval_result.json">RAG 检索结果</a> / <a href="outputs/agent_workspace/reports/agent_run_report.json">Agent 运行报告</a></p>
+  </div>
+  <div class="panel">
+    <h2>本日工程闭环</h2>
+    <p>学生要能解释：Agent 如何列出目录、读取资料、构建知识库、检索相关片段、调用 LLM、写回结构化产物，并用 trace 证明过程。</p>
+  </div>
+  <div class="panel">
+    <h2>本日边界</h2>
+    <p>Day3 不暴露 OpenAI-compatible HTTP 接口，不处理 ESP-Claw 或微信。Day4 才把这个 Agent Core 包装成设备可调用的服务。</p>
+  </div>
+</main>
+</body>
+</html>
