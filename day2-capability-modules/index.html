@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phase1 Day2 Prompt 产品实训</title>
+  <style>
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f7f8;color:#17202a;line-height:1.58}
+    header{background:#243746;color:white;padding:36px 42px 26px} header h1{margin:0 0 8px;font-size:30px} header p{margin:0;color:#dbe4ea;max-width:1000px}
+    main{max-width:1120px;margin:24px auto 48px;padding:0 22px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .panel{background:white;border:1px solid #d8dee6;border-radius:8px;padding:20px;margin:16px 0}.tag{display:inline-block;border:1px solid #b8ded8;background:#eef8f6;color:#0b534d;border-radius:999px;padding:3px 10px;font-size:12px}
+    h2{margin:10px 0 10px;font-size:21px}.muted{color:#667789}.button{display:inline-block;text-decoration:none;background:#0f766e;color:white;border-radius:6px;padding:10px 13px;font-weight:650;margin-top:8px}
+    code{background:#f1f5f9;border:1px solid #d8dee6;border-radius:5px;padding:1px 5px}@media(max-width:920px){.grid{grid-template-columns:1fr}header{padding:28px 22px 20px}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Day2 Prompt 产品实训包</h1>
+  <p>把提示词工程、上下文工程、结构化输出、多模态上下文抽取和 AI Coding 封装成 StudyFlow S3 的可调用能力模块，并交给 Day3 Agent Core 使用。</p>
+</header>
+<main>
+  <div class="grid">
+    <div class="panel">
+      <span class="tag">主产物</span>
+      <h2>产品控制台</h2>
+      <p class="muted">展示提示词库、Schema、评测用例和 Day3 Handoff。</p>
+      <a class="button" href="outputs/Day2_产品控制台.html">打开控制台</a>
+      <a class="button" href="outputs/Day2_能力模块展示.html">打开能力展示</a>
+    </div>
+    <div class="panel">
+      <span class="tag">能力模块</span>
+      <h2>Prompt Library</h2>
+      <p class="muted">把 Prompt Engineering 变成可复用资产。</p>
+      <a class="button" href="outputs/prompt_library.json">查看提示词库</a>
+    </div>
+    <div class="panel">
+      <span class="tag">Day3接口</span>
+      <h2>Agent Handoff</h2>
+      <p class="muted">Day3 Agent 读取的产品能力合约。</p>
+      <a class="button" href="outputs/agent_handoff/day2_agent_contract.json">查看合约</a>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>补充证据</h2>
+    <p><a href="outputs/product_spec.json">产品规格</a> / <a href="outputs/context_pack/day1_model_brief.json">Day1模型路由</a> / <a href="outputs/schemas/review_card.schema.json">JSON Schemas</a> / <a href="outputs/schemas/multimodal_observation.schema.json">多模态上下文 Schema</a> / <a href="outputs/eval_cases.json">Eval Cases</a> / <a href="outputs/engine_run_report.json">运行报告</a></p>
+  </div>
+  <div class="panel">
+    <h2>本日边界</h2>
+    <p>Day2 重点是 AI Learning Capability Module：它定义可调用能力、结构化输出、多模态上下文格式和评测样例。Day3 再把这些能力放入本地桌面 Agent Core。</p>
+  </div>
+</main>
+</body>
+</html>
